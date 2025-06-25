@@ -1,21 +1,10 @@
-
 import { getJobById } from '@/actions/job.actions'
 import DeleteJobDialog from '@/components/jobs/DeleteJobDialog';
-import { notFound } from 'next/navigation';
 
-interface PageProps {
-  params: {
-    id: string; 
-  };
-};
-
-const JobDetails = async ({params}: PageProps) => {
+const JobDetails = async ({ params }: { params: { id: string } }) => {
     const JobById = await getJobById(params.id)
     console.log(JobById);    
 
-    if(!JobById) {
-        notFound();
-    }
 
   return (
     <main className="max-w-3xl mx-auto py-10 px-4 space-y-6">
