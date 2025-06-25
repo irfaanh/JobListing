@@ -3,7 +3,13 @@ import { getJobById } from '@/actions/job.actions'
 import DeleteJobDialog from '@/components/jobs/DeleteJobDialog';
 import { notFound } from 'next/navigation';
 
-const JobDetails = async ({params}:{params : {id:string}}) => {
+interface PageProps {
+  params: {
+    id: string; 
+  };
+};
+
+const JobDetails = async ({params}: PageProps) => {
     const JobById = await getJobById(params.id)
     console.log(JobById);    
 
