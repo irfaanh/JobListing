@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Toaster } from 'react-hot-toast';
-import NavBar from "@/components/NavBar";
+import { Toaster } from 'sonner';
+import NavBar from '@/components/NavBar';
 import { ThemeProvider } from 'next-themes';
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
@@ -33,7 +33,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <NavBar />
             <main className="min-h-screen">{children}</main>
-            <Toaster position="top-left"/>
+            <Toaster position="top-right"/>
           </ThemeProvider>
         </Suspense>
       </body>

@@ -16,7 +16,7 @@ const NavBar = () => {
   if (!mounted) return null;
 
   return (
-    <nav className="w-full px-6 py-4 flex justify-end items-center bg-white dark:bg-black border-b">
+    <nav className="w-full px-6 py-4 flex justify-end items-center dark:bg-black" style={{backgroundColor: "#6F2DA8"}}>
       <Button
         variant="ghost"
         size="icon"

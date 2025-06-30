@@ -15,7 +15,7 @@ const DeleteJobDialog = ({ jobId }: Props) => {
   const router = useRouter();
 
   const handleDelete = async () => {
-    await deleteJob(jobId);
+    await deleteJob({id : jobId});
     setOpen(false);
     router.push("/jobs");
     router.refresh();
